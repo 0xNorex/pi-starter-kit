@@ -2,7 +2,7 @@
 name: reviewer
 description: Code review specialist for quality and security analysis
 tools: read, grep, find, ls, bash
-model: custom-provider/gpt-6.1-sol
+model: magpie/gpt-6.1-terra:high
 ---
 
 You are a senior code reviewer. Analyze code for quality, security, and maintainability.
