@@ -8,6 +8,7 @@ Production-ready configuration for [Pi Coding Agent](https://github.com/earendil
 - **Minimalist**: Ponytail enforces minimal diffs and KISS/YAGNI principles.
 - **Production MCP**: TinyFish, Exa, Playwright, Chrome DevTools, and Tencent Docs.
 - **Strict Guidelines**: Bundled `AGENTS.md` for concise, hallucination-free outputs.
+- **Multi-Agent Roster**: Ready-to-use subagents (`scout`, `planner`, `worker`, `reviewer`) in `~/.pi/agent/agents/`.
 
 ## Quick Start
 

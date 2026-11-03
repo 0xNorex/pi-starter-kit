@@ -13,6 +13,10 @@ cp "$SCRIPT_DIR/mcp.json" "$PI_AGENT_DIR/mcp.json"
 cp "$SCRIPT_DIR/AGENTS.md" "$PI_AGENT_DIR/AGENTS.md"
 cp "$SCRIPT_DIR/keybindings.json" "$PI_AGENT_DIR/keybindings.json"
 
+echo "==> 同步 Subagents 角色定义 (scout, planner, worker, reviewer)..."
+mkdir -p "$PI_AGENT_DIR/agents"
+cp -r "$SCRIPT_DIR/agents/"* "$PI_AGENT_DIR/agents/"
+
 if [ ! -f "$PI_AGENT_DIR/models.json" ]; then
   echo "==> 初始化 models.json (请后续按需配置 API Key)..."
   cp "$SCRIPT_DIR/models.json.example" "$PI_AGENT_DIR/models.json"
