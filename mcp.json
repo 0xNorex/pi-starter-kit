@@ -1,0 +1,60 @@
+{
+  "mcpServers": {
+    "tinyfish": {
+      "url": "https://agent.tinyfish.ai/mcp",
+      "exposure": "codemode",
+      "description": "TinyFish 实时搜索与内容抓取（仅 search/fetch_content 直连，其余工具经 codemode 按需调用）",
+      "headers": {
+        "X-API-Key": "${TINYFISH_API_KEY}"
+      }
+    },
+    "exa": {
+      "url": "https://mcp.exa.ai/mcp?tools=web_search_exa,web_fetch_exa",
+      "exposure": "codemode",
+      "description": "Exa 语义网络搜索与抓取",
+      "headers": {
+        "x-api-key": "${EXA_API_KEY}"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "exposure": "codemode",
+      "description": "Playwright 浏览器自动化（多步交互/表单，独立浏览器实例）"
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--autoConnect"
+      ],
+      "exposure": "codemode",
+      "description": "Chrome DevTools 调试（按需连接）"
+    },
+    "tencent-docs": {
+      "url": "https://docs.qq.com/openapi/mcp",
+      "exposure": "codemode",
+      "headers": {
+        "Authorization": "${TENCENT_DOCS_TOKEN}"
+      }
+    },
+    "tencent-sheetengine": {
+      "url": "https://docs.qq.com/api/v6/sheet/mcp",
+      "exposure": "codemode",
+      "headers": {
+        "Authorization": "${TENCENT_DOCS_TOKEN}"
+      }
+    },
+    "tencent-docengine": {
+      "url": "https://docs.qq.com/api/v6/doc/mcp",
+      "exposure": "codemode",
+      "headers": {
+        "Authorization": "${TENCENT_DOCS_TOKEN}"
+      }
+    }
+  }
+}
