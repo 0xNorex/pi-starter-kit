@@ -39,5 +39,5 @@
   "codemode": {
     "mode": "only"
   },
-  "cacheWarming": "idle"
+  "cacheWarming": "streaming"
 }
