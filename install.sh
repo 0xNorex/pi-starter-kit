@@ -17,6 +17,13 @@ echo "==> 同步 Subagents 角色定义 (scout, planner, worker, reviewer)..."
 mkdir -p "$PI_AGENT_DIR/agents"
 cp -r "$SCRIPT_DIR/agents/"* "$PI_AGENT_DIR/agents/"
 
+BILI_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/billion-context"
+mkdir -p "$BILI_CONFIG_DIR"
+if [ ! -f "$BILI_CONFIG_DIR/billion-context.json" ]; then
+  echo "==> 初始化 billion-context.json..."
+  cp "$SCRIPT_DIR/billion-context.json" "$BILI_CONFIG_DIR/billion-context.json"
+fi
+
 if [ ! -f "$PI_AGENT_DIR/models.json" ]; then
   echo "==> 初始化 models.json (请后续按需配置 API Key)..."
   cp "$SCRIPT_DIR/models.json.example" "$PI_AGENT_DIR/models.json"

@@ -1,0 +1,37 @@
+{
+  "providers": {},
+  "compress": {
+    "preserveRecentTokens": 36000,
+    "nudgeGrowthTokens": 80000
+  },
+  "pi": {
+    "subagents": {
+      "forceEnable": true,
+      "thinkingLevel": "high",
+      "maxDepth": 1,
+      "maxConcurrent": 4,
+      "agents": {
+        "reviewer": {
+          "model": "custom-provider/gpt-6.1-sol",
+          "thinkingLevel": "medium"
+        },
+        "planner": {
+          "model": "custom-provider/gpt-6.1-sol",
+          "thinkingLevel": "high"
+        },
+        "researcher": {
+          "model": "custom-provider/deepseek-v4.1-flash",
+          "thinkingLevel": "high"
+        },
+        "worker": {
+          "model": "custom-provider/deepseek-v4.1-flash",
+          "thinkingLevel": "high"
+        },
+        "oracle": {
+          "model": "custom-provider/gpt-6.1-sol",
+          "thinkingLevel": "medium"
+        }
+      }
+    }
+  }
+}
