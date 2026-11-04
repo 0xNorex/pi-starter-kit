@@ -1,10 +1,5 @@
 {
   "providers": {},
-  "compress": {
-    "preserveRecentTokens": 36000,
-    "nudgeGrowthTokens": 200000,
-    "minPressureBenefitTokens": 150000
-  },
   "pi": {
     "subagents": {
       "forceEnable": true,
