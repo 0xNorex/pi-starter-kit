@@ -38,5 +38,6 @@
   "editorPaddingX": 0,
   "codemode": {
     "mode": "only"
-  }
+  },
+  "cacheWarming": "idle"
 }
