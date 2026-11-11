@@ -30,13 +30,14 @@
             "max": null
           },
           "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
+            "input": 2,
+            "output": 10,
+            "cacheRead": 0.1,
             "cacheWrite": 0
           },
           "promptCache": {
-            "short": 300
+            "short": 300,
+            "long": 300
           }
         },
         {
@@ -59,13 +60,14 @@
             "max": null
           },
           "cost": {
-            "input": 0,
-            "output": 0,
-            "cacheRead": 0,
+            "input": 2,
+            "output": 10,
+            "cacheRead": 0.1,
             "cacheWrite": 0
           },
           "promptCache": {
-            "short": 300
+            "short": 300,
+            "long": 300
           }
         },
         {

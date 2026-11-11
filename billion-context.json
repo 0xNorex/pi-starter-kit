@@ -1,7 +1,21 @@
 {
+  "autoUpdate": false,
+  "network": {
+    "upstreamTimeoutMs": 1200000,
+    "upstreamFirstByteMs": 1200000
+  },
   "providers": {},
   "compress": {
-    "nudgeGrowthTokens": 200000
+    "promptPack": "lean",
+    "nudgeGrowthTokens": 300000,
+    "maxContextLimit": "80%",
+    "externalSummary": {
+      "enabled": true,
+      "targets": [
+        "magpie/deepseek-v4.1-flash"
+      ],
+      "autoFold": false
+    }
   },
   "pi": {
     "subagents": {

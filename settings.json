@@ -2,6 +2,10 @@
   "lastChangelogVersion": "1.5.2",
   "theme": "catppuccin",
   "defaultThinkingLevel": "high",
+  "modelThinkingLevels": {
+    "magpie/gemini-4-carbon": "medium",
+    "magpie/gemini-4-argon": "medium"
+  },
   "enabledModels": [
     "magpie/gemini-4-carbon",
     "magpie/gemini-4-argon",
@@ -16,7 +20,7 @@
     "npm:pi-cache-optimizer@2.10.4",
     "npm:pi-goal-x@0.34.0",
     "npm:@pi-agents/loop@0.3.1",
-    "npm:billion-context@0.1.208",
+    "npm:billion-context@0.1.213",
     "git:github.com/DietrichGebert/ponytail",
     "npm:@ff-labs/pi-fff",
     "npm:pi-web-access",
@@ -42,7 +46,10 @@
   "codemode": {
     "mode": "only"
   },
-  "cacheWarming": "streaming",
+  "cacheWarming": "idle",
+  "compaction": {
+    "enabled": false
+  },
   "extensionChangelogVersions": {
     "{\"source\":\"npm:pi-web-access\",\"scope\":\"user\"}": "0.47.0"
   }
