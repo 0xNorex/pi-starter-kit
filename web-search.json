@@ -1,0 +1,15 @@
+{
+  "workflow": "auto-summary",
+  "summaryModel": "magpie/deepseek-v4.1-flash",
+  "queryRewriteModel": "magpie/deepseek-v4.1-flash:high",
+  "summaryInstructions": "Keep exact numbers, prices, limits, versions, file paths, and error messages verbatim. Be concise.",
+  "fetch": {
+    "answerProvider": "magpie",
+    "answerModel": "deepseek-v4.1-flash"
+  },
+  "ssrf": {
+    "allowRanges": [
+      "198.18.0.0/15"
+    ]
+  }
+}
