@@ -14,13 +14,14 @@
   "defaultModel": "deepseek-v4.1-flash",
   "packages": [
     "npm:pi-cache-optimizer@2.10.4",
-    "npm:pi-ask-user@0.17.0",
     "npm:pi-goal-x@0.34.0",
     "npm:@pi-agents/loop@0.3.1",
     "npm:billion-context@0.1.208",
     "git:github.com/DietrichGebert/ponytail",
     "npm:@ff-labs/pi-fff",
-    "npm:pi-web-access"
+    "npm:pi-web-access",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:@juicesharp/rpiv-ask-user-question"
   ],
   "quietStartup": true,
   "defaultTools": [
