@@ -3,12 +3,10 @@
   "theme": "catppuccin",
   "defaultThinkingLevel": "high",
   "modelThinkingLevels": {
-    "magpie/gemini-4-carbon": "medium",
-    "magpie/gemini-4-argon": "medium"
+    "magpie/gemini-4-carbon": "medium"
   },
   "enabledModels": [
     "magpie/gemini-4-carbon",
-    "magpie/gemini-4-argon",
     "magpie/gemini-3.8-flash",
     "magpie/deepseek-v4.1-flash",
     "magpie/gpt-6.1-sol",
@@ -17,15 +15,10 @@
   "defaultProvider": "magpie",
   "defaultModel": "deepseek-v4.1-flash",
   "packages": [
-    "npm:pi-cache-optimizer@2.10.4",
-    "npm:pi-goal-x@0.34.0",
-    "npm:@pi-agents/loop@0.3.1",
-    "npm:billion-context@0.1.213",
-    "git:github.com/DietrichGebert/ponytail",
+    "npm:pi-cache-optimizer@2.10.5",
     "npm:@ff-labs/pi-fff",
     "npm:pi-web-access",
-    "npm:@juicesharp/rpiv-todo",
-    "npm:@juicesharp/rpiv-ask-user-question"
+    "npm:pi-subagents@0.88.0"
   ],
   "quietStartup": true,
   "defaultTools": [
@@ -45,13 +38,51 @@
   "editorPaddingX": 0,
   "codemode": {
     "mode": "only",
-    "inlineBudget": 10500
+    "inlineBudget": 6000
   },
   "cacheWarming": "idle",
-  "compaction": {
-    "enabled": false
+  "subagents": {
+    "defaultProvider": "magpie",
+    "defaultModel": "magpie/deepseek-v4.1-flash",
+    "defaultThinking": "high",
+    "agentOverrides": {
+      "researcher": {
+        "model": "magpie/deepseek-v4.1-flash",
+        "thinking": "high",
+        "advertise": true
+      },
+      "scout": {
+        "model": "magpie/deepseek-v4.1-flash",
+        "thinking": "high",
+        "advertise": true
+      },
+      "worker": {
+        "model": "magpie/deepseek-v4.1-flash",
+        "thinking": "high",
+        "advertise": true
+      },
+      "evidence-auditor": {
+        "model": "magpie/deepseek-v4.1-flash",
+        "thinking": "high"
+      },
+      "reviewer": {
+        "model": "magpie/gpt-6.1-sol",
+        "thinking": "medium",
+        "advertise": true
+      },
+      "oracle": {
+        "model": "magpie/gpt-6.1-sol",
+        "thinking": "medium",
+        "advertise": true
+      }
+    }
   },
   "extensionChangelogVersions": {
-    "{\"source\":\"npm:pi-web-access\",\"scope\":\"user\"}": "0.47.0"
+    "{\"source\":\"npm:pi-web-access\",\"scope\":\"user\"}": "0.47.0",
+    "{\"source\":\"npm:pi-subagents@0.88.0\",\"scope\":\"user\"}": "0.88.0"
+  },
+  "compaction": {
+    "enabled": true,
+    "reserveTokens": 80000
   }
 }

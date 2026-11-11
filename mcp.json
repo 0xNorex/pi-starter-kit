@@ -5,30 +5,24 @@
       "exposure": "codemode",
       "headers": {
         "Authorization": "${TENCENT_DOCS_TOKEN}"
-      }
+      },
+      "description": "腾讯文档综合接口（幻灯片、多维表、流程图、文件管理与导出）"
     },
     "tencent-sheetengine": {
       "url": "https://docs.qq.com/api/v6/sheet/mcp",
       "exposure": "codemode",
       "headers": {
         "Authorization": "${TENCENT_DOCS_TOKEN}"
-      }
+      },
+      "description": "腾讯文档在线表格精细读写、公式与样式引擎"
     },
     "tencent-docengine": {
       "url": "https://docs.qq.com/api/v6/doc/mcp",
       "exposure": "codemode",
       "headers": {
         "Authorization": "${TENCENT_DOCS_TOKEN}"
-      }
-    },
-    "playwright": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@playwright/mcp@latest"
-      ],
-      "exposure": "codemode",
-      "description": "Playwright 浏览器自动化（多步交互/表单，独立浏览器实例）"
+      },
+      "description": "腾讯文档 Word 在线文档段落、表格与样式精细排版引擎"
     },
     "chrome-devtools": {
       "command": "npx",
@@ -38,7 +32,8 @@
         "--autoConnect"
       ],
       "exposure": "codemode",
-      "description": "Chrome DevTools 调试（按需连接）"
+      "description": "Chrome DevTools 调试（按需连接）",
+      "enabled": false
     }
   }
 }
