@@ -2,12 +2,43 @@
   "providers": {
     "custom-provider": {
       "compat": {
-        "sendSessionAffinityHeaders": true
+        "sendSessionAffinityHeaders": true,
+        "sessionAffinityFormat": "openai",
+        "promptCacheKeyMode": "enabled"
       },
       "baseUrl": "https://api.your-provider-domain.com/v1",
-      "api": "openai-completions",
+      "api": "openai-responses",
       "apiKey": "!cat ~/.pi/agent/secrets/custom-provider.key",
       "models": [
+        {
+          "id": "gemini-4-carbon",
+          "name": "Gemini 4 Carbon",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "contextWindow": 1048576,
+          "maxTokens": 65536,
+          "thinkingLevelMap": {
+            "off": null,
+            "minimal": null,
+            "low": "low",
+            "medium": "medium",
+            "high": "high",
+            "xhigh": null,
+            "max": null
+          },
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "promptCache": {
+            "short": 300
+          }
+        },
         {
           "id": "gemini-4-argon",
           "name": "Gemini 4 Argon",
@@ -20,9 +51,12 @@
           "maxTokens": 65536,
           "thinkingLevelMap": {
             "off": null,
+            "minimal": null,
             "low": "low",
             "medium": "medium",
-            "high": "high"
+            "high": "high",
+            "xhigh": null,
+            "max": null
           },
           "cost": {
             "input": 0,
@@ -46,9 +80,12 @@
           "maxTokens": 65536,
           "thinkingLevelMap": {
             "off": null,
+            "minimal": null,
             "low": "low",
             "medium": "medium",
-            "high": "high"
+            "high": "high",
+            "xhigh": null,
+            "max": null
           },
           "cost": {
             "input": 0,
@@ -71,8 +108,12 @@
           "contextWindow": 1000000,
           "maxTokens": 128000,
           "thinkingLevelMap": {
+            "off": null,
+            "minimal": null,
             "low": "low",
+            "medium": null,
             "high": "high",
+            "xhigh": null,
             "max": "max"
           },
           "cost": {
@@ -80,10 +121,6 @@
             "output": 0,
             "cacheRead": 0,
             "cacheWrite": 0
-          },
-          "compat": {
-            "thinkingFormat": "deepseek",
-            "requiresReasoningContentOnAssistantMessages": true
           }
         },
         {
@@ -97,6 +134,37 @@
           "contextWindow": 500000,
           "maxTokens": 128000,
           "thinkingLevelMap": {
+            "off": null,
+            "minimal": "low",
+            "low": "low",
+            "medium": "medium",
+            "high": "high",
+            "xhigh": "xhigh",
+            "max": "max"
+          },
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "promptCache": {
+            "short": 300
+          }
+        },
+        {
+          "id": "gpt-6.1-terra",
+          "name": "GPT-6.1 Terra",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "contextWindow": 500000,
+          "maxTokens": 128000,
+          "thinkingLevelMap": {
+            "off": "none",
+            "minimal": "low",
             "low": "low",
             "medium": "medium",
             "high": "high",

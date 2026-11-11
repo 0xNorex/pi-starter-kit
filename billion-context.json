@@ -1,5 +1,8 @@
 {
   "providers": {},
+  "compress": {
+    "nudgeGrowthTokens": 200000
+  },
   "pi": {
     "subagents": {
       "forceEnable": true,
@@ -8,23 +11,23 @@
       "maxConcurrent": 4,
       "agents": {
         "reviewer": {
-          "model": "custom-provider/gpt-6.1-sol",
+          "model": "magpie/gpt-6.1-sol",
           "thinkingLevel": "medium"
         },
         "planner": {
-          "model": "custom-provider/gpt-6.1-sol",
+          "model": "magpie/gpt-6.1-terra",
           "thinkingLevel": "high"
         },
         "researcher": {
-          "model": "custom-provider/deepseek-v4.1-flash",
+          "model": "magpie/deepseek-v4.1-flash",
           "thinkingLevel": "high"
         },
         "worker": {
-          "model": "custom-provider/deepseek-v4.1-flash",
+          "model": "magpie/deepseek-v4.1-flash",
           "thinkingLevel": "high"
         },
         "oracle": {
-          "model": "custom-provider/gpt-6.1-sol",
+          "model": "magpie/gpt-6.1-sol",
           "thinkingLevel": "medium"
         }
       }
