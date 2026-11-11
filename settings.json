@@ -44,7 +44,8 @@
   "defaultProjectTrust": "ask",
   "editorPaddingX": 0,
   "codemode": {
-    "mode": "only"
+    "mode": "only",
+    "inlineBudget": 10500
   },
   "cacheWarming": "idle",
   "compaction": {
