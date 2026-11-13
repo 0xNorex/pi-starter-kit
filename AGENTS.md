@@ -11,11 +11,9 @@
 - 同一错误 2 次即停，报事实；禁止换个写法重试第三次。
 - 版本 / API / 报错先检索再写；不确定的签名先查文档或 describeTool，禁止凭记忆编参数。
 - 第三方 SDK/CLI 先查官方文档；不翻 node_modules / venv 源码，除非证实是上游 bug。
-- 联网搜索与网页抓取必须派 `subagent` 的 `researcher`（禁主会话直调 `web_search` / `fetch_content`）；跨 ≥3 文件探索派 `scout`；独立多文件改码派 `worker`；核心逻辑或高风险改动交付前派 `reviewer`。
 - 单向门（删数据 / force push / 线上配置 / 重大架构 / 产品方向）和「≥2 种合理解释」先确认；其余自决。
 - Python 默认 `uv`；密钥不进输出与提交；提交用英文 Conventional Commits，≤72 字符。
 
 ## 交付
 - 不新建测试文件；自检用一次性命令。
 - 给不出可复跑验证命令就标「未验」；派得出 reviewer/oracle 就不许标「未验」。
-- 派 subagent 时只写自包含 spec（可 copy-paste 命令 + `file:line`），返工重派。

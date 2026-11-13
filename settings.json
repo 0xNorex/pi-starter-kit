@@ -17,8 +17,7 @@
   "packages": [
     "npm:pi-cache-optimizer@2.10.5",
     "npm:@ff-labs/pi-fff",
-    "npm:pi-web-access",
-    "npm:pi-subagents@0.88.0"
+    "npm:pi-web-access"
   ],
   "quietStartup": true,
   "defaultTools": [
@@ -41,45 +40,8 @@
     "inlineBudget": 6000
   },
   "cacheWarming": "idle",
-  "subagents": {
-    "defaultProvider": "magpie",
-    "defaultModel": "magpie/deepseek-v4.1-flash",
-    "defaultThinking": "high",
-    "agentOverrides": {
-      "researcher": {
-        "model": "magpie/deepseek-v4.1-flash",
-        "thinking": "high",
-        "advertise": true
-      },
-      "scout": {
-        "model": "magpie/deepseek-v4.1-flash",
-        "thinking": "high",
-        "advertise": true
-      },
-      "worker": {
-        "model": "magpie/deepseek-v4.1-flash",
-        "thinking": "high",
-        "advertise": true
-      },
-      "evidence-auditor": {
-        "model": "magpie/deepseek-v4.1-flash",
-        "thinking": "high"
-      },
-      "reviewer": {
-        "model": "magpie/gpt-6.1-sol",
-        "thinking": "medium",
-        "advertise": true
-      },
-      "oracle": {
-        "model": "magpie/gpt-6.1-sol",
-        "thinking": "medium",
-        "advertise": true
-      }
-    }
-  },
   "extensionChangelogVersions": {
-    "{\"source\":\"npm:pi-web-access\",\"scope\":\"user\"}": "0.47.0",
-    "{\"source\":\"npm:pi-subagents@0.88.0\",\"scope\":\"user\"}": "0.88.0"
+    "{\"source\":\"npm:pi-web-access\",\"scope\":\"user\"}": "0.47.0"
   },
   "compaction": {
     "enabled": true,
